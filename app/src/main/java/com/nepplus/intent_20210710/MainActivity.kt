@@ -26,5 +26,13 @@ class MainActivity : AppCompatActivity() {
             //비행기 출발
             startActivity(myIntent);
         }
+
+        otherMessagebtn.setOnClickListener {
+            val otherMessage = messageEdt.text.toString()
+            val otherIntent = Intent(this,ViewContentActivity::class.java)
+
+            otherIntent.putExtra("othermessage",otherMessage)
+            startActivity(otherIntent)
+        }
     }
 }
