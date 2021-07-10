@@ -15,5 +15,16 @@ class MainActivity : AppCompatActivity() {
             val myIntent = Intent(this,OtherActivity::class.java)
             startActivity(myIntent);
         }
+
+        sendMessageBtn.setOnClickListener {
+            //Message 조회 하면으로 넘어가기.
+            val inputMessage = messageEdt.text.toString()
+            val myIntent = Intent(this,ViewActivity::class.java)
+
+            //출발 하기 전에 짐을 첨부하고나서
+            myIntent.putExtra("message", inputMessage)
+            //비행기 출발
+            startActivity(myIntent);
+        }
     }
 }
