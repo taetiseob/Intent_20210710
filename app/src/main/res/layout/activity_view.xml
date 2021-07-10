@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="이전 화면에서 보내준 메세지가 나옵니다"
-        android:textSize="17sp"/>
+        android:textSize="17sp"
+        android:id="@+id/messageTxt"/>
 
 </LinearLayout>
